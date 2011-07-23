@@ -9,7 +9,8 @@ module Geometry
 		end
 
 		def initialize(length, breadth)
-			raise InvalidRectangleError if (length == 0) || (breadth == 0) 
+			raise InvalidRectangleError if (length == 0) || (breadth == 0)
+			raise InvalidRectangleError if (length < 0) || (breadth < 0)  
 			@length = length
 			@breadth = breadth
 		end

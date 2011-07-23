@@ -41,6 +41,21 @@ module Geometry
 
 		end
 
+		context "the negative validation" do
+			it "should fail -ve breadth" do
+				lambda { Geometry::Rectangle.new(0, -1)}.should raise_error(InvalidRectangleError)
+			end
+
+			it "should fail -ve length" do
+				lambda { Geometry::Rectangle.new(-1, 0)}.should raise_error(InvalidRectangleError)
+			end
+
+			it "should fail -ve dimensions" do
+				lambda { Geometry::Rectangle.new(-1, -1)}.should raise_error(InvalidRectangleError)
+			end
+
+		end
+
 	end
 
 
