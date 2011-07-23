@@ -3,7 +3,11 @@ require 'spec_helper'
 module Gemoetry
 	describe Rectangle do
 		it "should have perimeter 30 given length as 5 and breadth 10" do		
-			Rectangle::Perimeter.perimeter(5, 10).should eql(30)
+			Rectangle::Perimeter.new(5, 10).perimeter.should eql(30)
+		end
+
+		it "should have perimeter 10 for length 2, breadth 3" do
+			Rectangle::Perimeter.new(2, 3).perimeter.should eql(10)
 		end
 	end
 end
