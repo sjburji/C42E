@@ -1,5 +1,5 @@
-module Rectangle
-	class Perimeter
+module Geometry
+	class Rectangle
 		def initialize(l, b)
 			@length = l
 			@breadth = b
