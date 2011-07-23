@@ -76,6 +76,10 @@ module Geometry
 			it "should not be equal with diff dimensions" do
 				Geometry::Rectangle.new(1, 2) == Geometry::Rectangle.new(2, 1)
 			end
+			
+			it "should not be equal to 2" do
+				Geometry::Rectangle.new(1, 2) == Geometry::Rectangle.new(2)
+			end
 		end
 
 	end

@@ -9,7 +9,8 @@ module Geometry
 			new(length, breadth)
 		end
 
-		def initialize(length, breadth)
+		def initialize(length = nil, breadth = nil)
+			return false if length == nil || breadth == nil
 			raise InvalidRectangleError if (length <= 0) || (breadth <= 0)
 			@length = length
 			@breadth = breadth
@@ -23,7 +24,7 @@ module Geometry
 			@length * @breadth
 		end
 
-		def eql?(rec)
+		def eql?(rec)			 
 			rec.length == @length and rec.breadth == @breadth
 		end
 		
