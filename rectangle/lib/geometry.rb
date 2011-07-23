@@ -1,5 +1,5 @@
+require 'geometry/errors'
 require 'geometry/rectangle'
-require 'geometry/square'
 
 module Geometry
 end
