@@ -10,11 +10,7 @@ module Rectangle
 		end
 
 		def area
-			if @length == 8
-				24
-			else
-				50
-			end
+			@length * @breadth
 		end
 	end
 end
