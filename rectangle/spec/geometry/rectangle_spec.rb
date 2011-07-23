@@ -56,6 +56,28 @@ module Geometry
 
 		end
 
+		context "Two rectangles" do
+			it "should be equal with same dimensions" do
+				rect1 = Geometry::Rectangle.new(1, 2)
+				rect2 = Geometry::Rectangle.new(1, 2)
+				rect1.should be_eql(rect2)
+			end
+
+			it "should not be equal with diff dimensions" do
+				rect1 = Geometry::Rectangle.new(1, 2)
+				rect2 = Geometry::Rectangle.new(2, 1)
+				rect1.should_not be_eql(rect2)
+			end
+
+			it "should be == with same dimensions" do
+				Geometry::Rectangle.new(1, 2) == rect2 = Geometry::Rectangle.new(1, 2)
+			end
+
+			it "should not be equal with diff dimensions" do
+				Geometry::Rectangle.new(1, 2) == Geometry::Rectangle.new(2, 1)
+			end
+		end
+
 	end
 
 

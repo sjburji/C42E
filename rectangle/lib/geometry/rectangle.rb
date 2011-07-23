@@ -1,5 +1,6 @@
 module Geometry
 	class Rectangle
+		attr_reader :length, :breadth
 		def self.build_square(side)
 			new(side, side)
 		end
@@ -9,8 +10,7 @@ module Geometry
 		end
 
 		def initialize(length, breadth)
-			raise InvalidRectangleError if (length == 0) || (breadth == 0)
-			raise InvalidRectangleError if (length < 0) || (breadth < 0)  
+			raise InvalidRectangleError if (length <= 0) || (breadth <= 0)
 			@length = length
 			@breadth = breadth
 		end
@@ -22,5 +22,14 @@ module Geometry
 		def area
 			@length * @breadth
 		end
+
+		def eql?(rec)
+			rec.length == @length and rec.breadth == @breadth
+		end
+		
+		def ==(rec)
+			self.eql?(rec)
+		end
+
 	end
 end
