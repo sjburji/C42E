@@ -64,7 +64,7 @@ module Geometry
 		end
 
 		it "should have same hash code" do
-				Geometry::Rectangle.build_square(2).hash.should eq(Geometry::Rectangle.build_square(2).hash)
-			end
+			Geometry::Rectangle.build_square(2).hash.should eq(Geometry::Rectangle.build_square(2).hash)
+		end
 	end
 end
