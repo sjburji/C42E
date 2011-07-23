@@ -68,19 +68,29 @@ module Geometry
 				rect2 = Geometry::Rectangle.new(2, 1)
 				rect1.should_not be_eql(rect2)
 			end
+			
+			it "should not be equal to 2" do
+				Geometry::Rectangle.new(1, 2).should_not be eq(2)
+			end
+		
+			it "should not be equal to nil" do
+				Geometry::Rectangle.new(1, 2).should_not be eq(nil)
+			end
 
 			it "should be == with same dimensions" do
-				Geometry::Rectangle.new(1, 2) == rect2 = Geometry::Rectangle.new(1, 2)
+				Geometry::Rectangle.new(1, 2).should be == Geometry::Rectangle.new(1, 2)
 			end
 
 			it "should not be equal with diff dimensions" do
-				Geometry::Rectangle.new(1, 2) == Geometry::Rectangle.new(2, 1)
-			end
-			
-			it "should not be equal to 2" do
-				Geometry::Rectangle.new(1, 2) == Geometry::Rectangle.new(2)
-			end
+				Geometry::Rectangle.new(1, 2).should_not be == Geometry::Rectangle.new(2, 1)
+			end			
 		end
+
+
+			it "should have same hash code" do
+				Geometry::Rectangle.new(1, 2).hash.should eq(Geometry::Rectangle.new(1, 2).hash)
+			end
+
 
 	end
 

@@ -55,12 +55,16 @@ module Geometry
 			end
 
 			it "should be == with same dimensions" do
-				Geometry::Rectangle.build_square(1) == rect2 = Geometry::Rectangle.build_square(1)
+				Geometry::Rectangle.build_square(1).should be == Geometry::Rectangle.build_square(1)
 			end
 
 			it "should not be equal with diff dimensions" do
-				Geometry::Rectangle.build_square(2) == Geometry::Rectangle.build_square(1)
+				Geometry::Rectangle.build_square(2).should_not be == Geometry::Rectangle.build_square(1)
 			end
 		end
+
+		it "should have same hash code" do
+				Geometry::Rectangle.build_square(2).hash.should eq(Geometry::Rectangle.build_square(2).hash)
+			end
 	end
 end
