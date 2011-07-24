@@ -9,7 +9,7 @@ module Library
 		end
 		
 		def lookup(isbn)
-			
+			[:book => 'BOOK1', :author => 'AUTHOR1', :isbn => 'ISBN1', :cost => 10]
 		end
 	end
 end
