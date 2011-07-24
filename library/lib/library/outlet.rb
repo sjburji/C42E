@@ -3,7 +3,8 @@ module Library
 		attr_reader :books
 		def initialize
 			@books = Array.new
-			@books = [{:book => 'BOOK1', :author => 'AUTHOR1', :isbn => 'ISBN1', :cost => 10},
+			@books = [
+         {:book => 'BOOK1', :author => 'AUTHOR1', :isbn => 'ISBN1', :cost => 10},
 				 {:book => 'BOOK2', :author => 'AUTHOR2', :isbn => 'ISBN2', :cost => 20},
 				 {:book => 'BOOK3', :author => 'AUTHOR3', :isbn => 'ISBN3', :cost => 30}]
 		end

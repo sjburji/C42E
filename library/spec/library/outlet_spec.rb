@@ -32,6 +32,12 @@ module Library
         book = {:book => 'BOOK1', :author => 'AUTHOR1', :isbn => 'ISBN8', :cost => 10}
 				@outlet.issue(book).should eq(false)
 			end
+
+      if "should not issue twice" do
+            book = {:book => 'BOOK1', :author => 'AUTHOR1', :isbn => 'ISBN1', :cost => 10}
+    				@outlet.issue(book)
+    				@outlet.issue(book).should eq(false)        
+      end
 		end
 	end
 end
