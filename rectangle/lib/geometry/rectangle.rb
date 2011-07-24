@@ -23,11 +23,12 @@ module Geometry
 			@length * @breadth
 		end
 
-		def eql?(rec)			 
+		def eql?(rec)			
 			self == (rec)			
 		end
 		
-		def ==(rec)
+		def ==(rec)								 
+			return false unless rec.is_a?(Rectangle)	
 			rec.length == @length and rec.breadth == @breadth
 		end
 

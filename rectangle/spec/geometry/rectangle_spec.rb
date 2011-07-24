@@ -70,19 +70,19 @@ module Geometry
 			end
 			
 			it "should not be equal to 2" do
-				Geometry::Rectangle.new(1, 2).should_not be eq(2)
+				Geometry::Rectangle.new(1, 2).should_not eq(2)
 			end
 		
 			it "should not be equal to nil" do
-				Geometry::Rectangle.new(1, 2).should_not be eq(nil)
+				Geometry::Rectangle.new(1, 2).should_not eq(nil)
 			end
 
 			it "should be == with same dimensions" do
-				Geometry::Rectangle.new(1, 2).should be == Geometry::Rectangle.new(1, 2)
+				Geometry::Rectangle.new(1, 2).should == Geometry::Rectangle.new(1, 2)
 			end
 
 			it "should not be equal with diff dimensions" do
-				Geometry::Rectangle.new(1, 2).should_not be == Geometry::Rectangle.new(2, 1)
+				Geometry::Rectangle.new(1, 2).should_not == Geometry::Rectangle.new(2, 1)
 			end			
 		end
 
