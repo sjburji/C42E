@@ -11,8 +11,8 @@ module Library
 		end
 
 		it "should give Book1 when looked up with ISBN1" do
-			book = [:book => 'BOOK1', :author => 'AUTHOR1', :isbn => 'ISBN1', :cost => 10]
+			book = {:book => 'BOOK1', :author => 'AUTHOR1', :isbn => 'ISBN1', :cost => 10}
 			@outlet.lookup('ISBN1').should eq(book)
-		end	
+		end
 	end
 end
