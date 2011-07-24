@@ -1,5 +1,6 @@
 module Library
 	class Outlet
+		attr_reader :books
 		def initialize
 			@books = Array.new
 			@books = [{:book => 'BOOK1', :author => 'AUTHOR1', :isbn => 'ISBN1', :cost => 10},
@@ -12,7 +13,11 @@ module Library
 		end
 		
 		def lookup(isbn)
-			{:book => 'BOOK1', :author => 'AUTHOR1', :isbn => isbn, :cost => 10}
+			@books.each do |book|
+				if book[:isbn] == isbn
+					return book
+				end
+			end
 		end
 	end
 end
