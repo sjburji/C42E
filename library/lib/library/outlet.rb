@@ -1,7 +1,15 @@
 module Library
-	class Books
-		def self.count
-			3
+	class Outlet
+		def initialize
+			@books = Array.new(3)
+		end
+		
+		def books
+			@books.length
+		end
+		
+		def lookup(isbn)
+			
 		end
 	end
 end
