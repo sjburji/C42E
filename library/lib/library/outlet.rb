@@ -1,4 +1,7 @@
 module Library
-	class Outlet
+	class Books
+		def self.count
+			3
+		end
 	end
 end
