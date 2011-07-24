@@ -24,11 +24,13 @@ module Library
 		context "Customer" do
 
 			it "should have book issued if found" do
-				@outlet.issue('ISBN1').should eq(true)
+        book = {:book => 'BOOK1', :author => 'AUTHOR1', :isbn => 'ISBN1', :cost => 10}
+				@outlet.issue(book).should eq(true)
 			end
 
 			it "should not have book issued if not found" do
-				@outlet.issue('ISBN8').should eq(false)
+        book = {:book => 'BOOK1', :author => 'AUTHOR1', :isbn => 'ISBN8', :cost => 10}
+				@outlet.issue(book).should eq(false)
 			end
 		end
 	end

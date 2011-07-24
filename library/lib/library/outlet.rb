@@ -21,8 +21,8 @@ module Library
 			return nil
 		end
 
-		def issue(isbn)
-			unless lookup(isbn).nil?
+		def issue(book)
+			unless lookup(book[:isbn]).nil?
 				return true
 			end
 			return false
